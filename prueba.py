@@ -28,7 +28,7 @@ print("-------------------------------------------------------------------------
 def datospasajero():
     nombre = input("Ingrese su nombre: ")
     print("El rut se debe registrar formato numero y sin guion ni puntos")
-    rut = str(input("Ingrese su rut: "))
+    rut = int(input("Ingrese su rut: "))
     pasajero = print(f"Sus datos se han registrado correctamente: ", (nombre, rut))
     print(
         "-------------------------------------------------------------------------------"
@@ -37,15 +37,17 @@ def datospasajero():
 
 
 def comprapasajes():
-    print("(1)El valor de un asiento comun es de $60000")
-    print("(2)El valor de un asiento con espacion para pieres es de $80000")
-    print("(3)El valor de un asiento no reclinable es de $50000")
-    pasaje = int(input("Cuantos pasajes va a querer: "))
-    for i in pasaje:
-        print(i, pasaje[i])
+    print("(1) El valor de un asiento común es de $60000")
+    print("(2) El valor de un asiento con espacio para piernas es de $80000")
+    print("(3) El valor de un asiento no reclinable es de $50000")
+    pasaje = int(input("¿Cuántos pasajes va a querer?: "))
+
+    for i in range(pasaje):  # Usamos range para iterar según la cantidad de pasajes
+        print(f"Pasaje {i + 1}:")
+        print(f"Subtotal: {asientoComun + asientoparapiernas + asientoNoreclinable}")
         subtotal = asientoComun + asientoparapiernas + asientoNoreclinable
-        asiento = [asiento, subtotal]
-        listado.append(asiento)
+        asiento.append(subtotal)  # Agregamos el subtotal a la lista de asientos
+        listado.append(asiento)  # Agregamos el asiento al listado
 
 
 def ubicaciones():
