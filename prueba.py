@@ -57,12 +57,17 @@ def ubicaciones():
 
 
 while True:
-
     print(
-        "(1)registra pasajero\n(2)Comprar pasajes\n(2)Ver ubicacion disponibles\n(3)Ver listado de pasajeros\n(4)Buscar asiento\n(5)Cambiar asiento\n(6)Salir"
+        "(1) Registra pasajero\n"
+        "\n(2) Comprar pasajes\n"
+        "\n(3) Ver ubicación disponibles\n"
+        "\n(4) Ver listado de pasajeros\n"
+        "\n(5) Buscar asiento\n"
+        "\n(6) Cambiar asiento\n"
+        "\n(7) Salir"
     )
 
-    opcion = int(input("Ingrese una opcion: "))
+    opcion = int(input("\nIngrese una opción: "))
 
     if opcion == 1:
         datospasajero()
