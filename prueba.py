@@ -37,15 +37,22 @@ def datospasajero():
 
 
 def comprapasajes():
+    """Función para comprar pasajes y calcular el subtotal."""
+
     print("(1) El valor de un asiento común es de $60000")
     print("(2) El valor de un asiento con espacio para piernas es de $80000")
     print("(3) El valor de un asiento no reclinable es de $50000")
-    pasaje = int(input("¿Cuántos pasajes va a querer?: "))
+
+    try:
+        pasaje = int(input("¿Cuántos pasajes va a querer?: "))
+    except ValueError:
+        print("Por favor, ingrese un número válido.")
+        return  # Salimos de la función si ocurre un error
 
     for i in range(pasaje):  # Usamos range para iterar según la cantidad de pasajes
         print(f"Pasaje {i + 1}:")
-        print(f"Subtotal: {asientoComun + asientoparapiernas + asientoNoreclinable}")
         subtotal = asientoComun + asientoparapiernas + asientoNoreclinable
+        print(f"Subtotal: {subtotal}")
         asiento.append(subtotal)  # Agregamos el subtotal a la lista de asientos
         listado.append(asiento)  # Agregamos el asiento al listado
 
